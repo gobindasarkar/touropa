@@ -1,0 +1,55 @@
+/*===============================
+ #.buttons
+=================================*/
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: .6rem;
+    height: 3.5rem;
+    min-width: 10rem;
+    padding: .3rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--white);
+    background-color: var(--primary-color);
+    box-shadow: 0px 2px 4px 0px rgba(81, 191, 215, 0.35);
+    transition: $transition;
+    &:hover {
+        color: var(--white);
+        background-color: var(--hover-color);
+    }
+}
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    grid-column-gap: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--white);
+    transition: $transition;
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+.primary-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-column-gap: 1rem;
+    background-color: var(--primary-color);
+    height: 5rem;
+    min-width: 15rem;
+    padding: 1rem 2rem;
+    border-radius: .6rem;
+    color: var(--white);
+    transition: $transition;
+    &:hover {
+        color: var(--white);
+        background-color: var(--hover-color);
+    }
+}

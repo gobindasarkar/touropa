@@ -1,0 +1,57 @@
+/*
+------------- Table of content ----------------
+
+Template Name: Touropa  Responsive  HTML5 Template
+Template URI: https://touropa.com/
+Description: Touropa  Responsive  HTML5 Template
+Author: Gobinda Sarkar
+Author URI: https://touropa.com/
+Version: 1.0
+
+---------------------- common content ----------
+1.body reset content
+#.header-area
+#.footer-area
+#.hero-banner-area
+#.popular-destinations-area
+#.counter-area
+#.all-country-area
+#.popular-hotel-arae
+#.buttons
+#.section-top-title
+#.single-card-item
+#.team-area
+#.our-clients-arae
+
+
+
+
+*/
+
+/*===============================
+ #.hero-banner-area
+=================================*/
+
+// variable
+@import "variable/_variable.scss";
+
+// mixin
+@import "mixin/_mixin.scss";
+
+// body reset content
+@import "reset/_predefine.scss";
+
+// component content
+@import "component/header.scss";
+@import "component/footer.scss";
+@import "component/hero-banner-area";
+@import "component/popular-destinations-area";
+@import "component/counter-area";
+@import "component/popular-hotel-arae";
+@import "component/all-country-area";
+@import "component/buttons";
+@import "component/section-top-title";
+@import "component/single-card-item";
+@import "component/team-area";
+@import "component/our-clients-arae";
+

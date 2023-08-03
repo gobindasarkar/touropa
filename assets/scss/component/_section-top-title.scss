@@ -1,0 +1,17 @@
+/*===============================
+ #.section-top-title
+=================================*/
+.section-top-title {
+    .sub-title {
+        margin-bottom: 1.4rem;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+    .title {
+        font-size: 3.2rem;
+        font-weight: 500;
+        color: var(--black-color);
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,121 @@
+/*===============================
+ #.all-country-area
+=================================*/
+.all-country-area {
+  padding: 3.5rem 0;
+  .single-country {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 2.4rem;
+    .country-thumbnail {
+      width: 45%;
+      img {
+        height: 19.6rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .country-info {
+      flex: 1;
+      padding: 0.5rem 2.5rem;
+      h3 {
+        margin-bottom: 1rem;
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        text-transform: capitalize;
+      }
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--gray-color);
+      }
+      .read-more-btn {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--gray-color);
+        text-transform: capitalize;
+        transition: $transition;
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+.apply-for-visa {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  background: var(--white);
+  border-radius: 0.4rem;
+  overflow: hidden;
+  .apply-visa-left {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 282px;
+      object-fit: cover;
+    }
+  }
+  .apply-visa-right {
+    padding: 2rem 5rem;
+    flex: 1;
+    h4 {
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--black-color);
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: var(--black-color);
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .all-country-area .single-country .country-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+  }
+  .all-country-area .single-country .country-info p {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 767px) {
+    .apply-for-visa .apply-visa-right {
+        padding: 1rem 2rem;
+    }
+}
+@media (max-width: 575px) {
+  .all-country-area .single-country {
+    flex-flow: row wrap;
+  }
+  .all-country-area .single-country .country-thumbnail {
+    width: 100%;
+  }
+  .all-country-area .single-country .country-info {
+    padding: 2.5rem;
+  }
+  .apply-for-visa {
+    flex-flow: row wrap;
+  }
+  .apply-for-visa .apply-visa-left {
+    width: 100%;
+  }
+  .apply-for-visa .apply-visa-right {
+    padding: 2.5rem;
+  }
+}
