@@ -1,6 +1,9 @@
 /*===============================
  #.our-clients-arae
 =================================*/
+.our-clients-arae {
+  overflow: hidden;
+}
 .single-clint {
   .single-clint-inner {
     @include flex-position(flex, center, center);
@@ -9,14 +12,18 @@
     border-radius: 0.5rem;
     border: 1px solid #dbdbdb;
     text-align: center;
+
     img {
+      width: 100%;
       max-width: 19rem;
       object-fit: cover;
     }
   }
 }
+
 .our-client-slider {
   position: relative;
+
   .slick-arrow {
     @include flex-position(inline-flex, center, center);
     position: absolute;
@@ -31,11 +38,27 @@
     opacity: 1;
     cursor: pointer;
     background-color: var(--white);
+
     &.slick-prev {
       left: 0;
     }
+
     &.slick-next {
       right: 0;
     }
+  }
+}
+
+@media (max-width: 575px) {
+  .our-client-slider .slick-arrow.slick-prev {
+    left: 10px;
+  }
+
+  .our-client-slider .slick-arrow.slick-next {
+    right: 10px;
+  }
+
+  .single-clint .single-clint-inner {
+    height: 8rem;
   }
 }
