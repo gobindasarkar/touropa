@@ -883,6 +883,21 @@ scrollUp
   .popular-destinations-area .popular-destinations-wrap {
     grid-template-columns: repeat(1, 1fr);
   }
+  .popular-destinations-area .popular-destinations-wrap .single-destination .destination-info .destination-top h2 {
+    font-size: 2.4rem;
+  }
+  .popular-destinations-area .popular-destinations-wrap .single-destination .destination-info .destination-bottom .destination-time {
+    font-size: 1.6rem;
+  }
+  .popular-destinations-area .popular-destinations-wrap .single-destination .destination-info .destination-bottom .destination-time::before {
+    height: 2px;
+  }
+  .popular-destinations-area .popular-destinations-wrap .single-destination .destination-info .destination-bottom .destination-info-bottom .destination-info-left h3 {
+    font-size: 1.4rem;
+  }
+  .popular-destinations-area .popular-destinations-wrap .single-destination .destination-info .destination-bottom .destination-info-bottom .price {
+    font-size: 2.8rem;
+  }
 }
 /*===============================
  #.counter-area
@@ -955,6 +970,11 @@ scrollUp
   display: block;
 }
 
+@media (max-width: 575px) {
+  .popular-hotel-arae .filtering-button li {
+    font-size: 1.6rem;
+  }
+}
 /*===============================
  #.all-country-area
 =================================*/

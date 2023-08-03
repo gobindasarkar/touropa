@@ -9,6 +9,7 @@
         flex-flow: row wrap;
         grid-column-gap: 3rem;
         grid-row-gap: .5rem;
+
         li {
             position: relative;
             padding-bottom: .8rem;
@@ -17,6 +18,7 @@
             font-weight: 400;
             text-transform: capitalize;
             color: var(--black-color);
+
             &::before {
                 position: absolute;
                 content: '';
@@ -29,11 +31,18 @@
                 right: 0;
                 display: none;
             }
+
             &.active {
                 &::before {
                     display: block;
                 }
             }
         }
+    }
+}
+
+@media (max-width: 575px) {
+    .popular-hotel-arae .filtering-button li {
+        font-size: 1.6rem;
     }
 }
