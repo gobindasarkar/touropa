@@ -11,6 +11,7 @@
   --bg-one: #0F2454;
   --white: #ffffff;
   --black: #000000;
+  --primary-shadow: 0px 1px 7px 1px rgba(85, 85, 85, 0.25);
 }
 
 html,
@@ -240,6 +241,9 @@ ul {
 }
 .mt-20 {
   margin-top: 20px;
+}
+.mb-30 {
+  margin-bottom: 3rem;
 }
 .mb-35 {
   margin-bottom: 3.5rem;

@@ -22,6 +22,16 @@ Version: 1.0
 #.single-card-item
 #.team-area
 #.our-clients-arae
+#.breadcrumb-area
+#.filter-area
+#.single-card-item-list
+#.sidebar-area
+#.pagination-area
+#.banner-slider-area
+#.package-info-width-contact-area
+#.package-details-area
+#.primary-tabs
+#.you-may-like-area
 
 
 
@@ -29,7 +39,7 @@ Version: 1.0
 */
 
 /*===============================
- #.hero-banner-area
+ #.you-may-like-area
 =================================*/
 
 // variable
@@ -54,4 +64,14 @@ Version: 1.0
 @import "component/single-card-item";
 @import "component/team-area";
 @import "component/our-clients-arae";
+@import "component/breadcrumb-area";
+@import "component/filter-area";
+@import "component/single-card-item-list";
+@import "component/sidebar-area";
+@import "component/pagination-area";
+@import "component/banner-slider-area";
+@import "component/package-info-width-contact-area";
+@import "component/package-details-section";
+@import "component/primary-tabs";
+@import "component/you-may-like-area";
 

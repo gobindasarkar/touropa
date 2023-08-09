@@ -1,0 +1,33 @@
+/*===============================
+ #.you-may-like-area
+=================================*/
+.you-may-like-area {
+    overflow: hidden
+}
+.slick-arrow {
+    @include flex-position(flex, center, center);
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    opacity: 1;
+    z-index: 2;
+    position: absolute;
+    transition: $transition;
+    &:hover {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+}
+.cards-slider {
+    .slick-arrow {
+        top: -6.5rem;
+        &.slick-prev {
+            right: 7rem;
+        }
+        &.slick-next {
+            right: 1.5rem;
+        }
+    }
+}

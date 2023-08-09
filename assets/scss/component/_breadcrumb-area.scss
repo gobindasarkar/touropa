@@ -1,0 +1,36 @@
+/*===============================
+ #.breadcrumb-area
+=================================*/
+.breadcrumb-area {
+    padding: 2.5rem 0;
+    .breadcrumb-menu {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        grid-column-gap: 3.5rem;
+        li {
+            position: relative;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: var(--black-color);
+            &::before {
+                position: absolute;
+                content: '>';
+                left: calc(100% + 15px);
+            }
+            &:last-child {
+                &:before {
+                    display: none;
+                }
+            }
+            a {
+                color: var(--black-color);
+                transition: $transition;
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}

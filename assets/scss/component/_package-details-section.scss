@@ -1,0 +1,70 @@
+/*===============================
+ #.package-details-area
+=================================*/
+.package-details-area {
+    padding: 1.2rem 2rem;
+    background-color: var(--white);
+    box-shadow: 0px 1px 7px 1px rgba(85, 85, 85, 0.25);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    border-radius: .3rem;
+    grid-row-gap: 2rem;
+    .package-details-left {
+        display: flex;
+        flex-flow: row wrap;
+        flex: 1;
+        grid-row-gap: 1rem;
+        .single-details {
+            padding: 0 1.5rem;
+            border-right: 1px solid var(--gray-color);
+
+            &:last-child {
+                border: none;
+            }
+
+            h4 {
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: var(--black-color);
+            }
+
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: var(--black-color);
+
+                small {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .package-details-right {
+        display: flex;
+        flex-flow: row wrap;
+        grid-column-gap: 2rem;
+        grid-row-gap: 1rem;
+    }
+}
+@media (max-width: 991px) {
+    .package-details-area .package-details-right {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .package-details-area .package-details-left .single-details {
+        border-right: none;
+        width: 50%;
+    }
+}
+@media (max-width: 414px) {
+    .package-details-area .package-details-left .single-details {
+        width: 100%;
+    }
+    .primary-btn-outline {
+        width: 100%;
+    }
+}

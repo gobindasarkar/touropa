@@ -16,32 +16,6 @@
         transition: $transition;
       }
     }
-    .favorite-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.8rem;
-      height: 2.8rem;
-      position: absolute;
-      left: 2rem;
-      top: 2rem;
-      z-index: 2;
-      border-radius: 0.4rem;
-      border: none;
-      background-color: var(--white);
-      .active-icon {
-        display: none;
-        color: var(--primary-color);
-      }
-      &.active {
-        .default-icon {
-          display: none;
-        }
-        .active-icon {
-          display: block;
-        }
-      }
-    }
   }
   .card-info {
     position: relative;
@@ -138,6 +112,32 @@
   &:hover {
     .card-thumbnail {
       transform: scale(1.2);
+    }
+  }
+}
+.favorite-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  z-index: 2;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: var(--white);
+  .active-icon {
+    display: none;
+    color: var(--primary-color);
+  }
+  &.active {
+    .default-icon {
+      display: none;
+    }
+    .active-icon {
+      display: block;
     }
   }
 }
