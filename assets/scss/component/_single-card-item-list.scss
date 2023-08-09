@@ -45,6 +45,9 @@
             a {
                 color: var(--black-color);
                 transition: $transition;
+                &:hover {
+                    color: var(--primary-color);
+                }
             }
         }
 

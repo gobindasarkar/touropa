@@ -16,8 +16,8 @@
                 font-weight: 500;
                 color: var(--gray-color);
                 padding: 1.5rem 0;
-                border-top: 1px solid red;
-
+                border-top: 1px solid var(--black-color);
+                text-transform: capitalize;
                 &.has-arrow::after {
                     right: 0;
                 }
@@ -88,6 +88,7 @@
                 font-weight: 500;
                 text-transform: capitalize;
                 color: var(--gray-color);
+                text-transform: capitalize;
             }
 
             .reset-btn {
@@ -172,6 +173,7 @@
                 font-size: 1.4rem;
                 font-weight: 500;
                 color: var(--gray-color);
+                text-transform: capitalize;
 
                 &:not(.collapsed) {
                     background-color: transparent;
@@ -310,6 +312,7 @@
         font-size: 1.5rem;
         font-weight: 500;
         color: var(--black);
+        text-transform: capitalize;
     }
 }
 .fare-summary-widget {

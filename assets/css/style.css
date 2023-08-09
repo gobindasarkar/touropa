@@ -1706,6 +1706,9 @@ scrollUp
   color: var(--black-color);
   transition: all 0.5s linear;
 }
+.single-card-item-list .card-info .card-title a:hover {
+  color: var(--primary-color);
+}
 .single-card-item-list .card-info .location {
   display: flex;
   align-items: center;
@@ -1818,7 +1821,8 @@ scrollUp
   font-weight: 500;
   color: var(--gray-color);
   padding: 1.5rem 0;
-  border-top: 1px solid red;
+  border-top: 1px solid var(--black-color);
+  text-transform: capitalize;
 }
 .sidebar-area .sidebar-dropdown li .dropdown-btn.has-arrow::after {
   right: 0;
@@ -1880,6 +1884,7 @@ scrollUp
   font-weight: 500;
   text-transform: capitalize;
   color: var(--gray-color);
+  text-transform: capitalize;
 }
 .sidebar-area .range-widget .slider-range-top .reset-btn {
   padding: 0;
@@ -1944,6 +1949,7 @@ scrollUp
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--gray-color);
+  text-transform: capitalize;
 }
 .sidebar-area .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background-color: transparent;
@@ -2057,6 +2063,7 @@ scrollUp
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--black);
+  text-transform: capitalize;
 }
 
 .fare-summary-widget .summary-list {
