@@ -408,7 +408,6 @@ scrollUp
 }
 .header-area.stick {
   background: var(--white);
-  padding: 1rem 0;
   position: fixed;
   top: 0;
   width: 100%;
