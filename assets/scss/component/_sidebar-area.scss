@@ -237,24 +237,6 @@
                 }
             }
         }
-
-        .more-btn {
-            display: inline-flex;
-            align-items: center;
-            grid-column-gap: 1rem;
-            padding: 0;
-            border: none;
-            background-color: transparent;
-            font-size: 1.2rem;
-            font-weight: 400;
-            text-transform: capitalize;
-            color: var(--primary-color);
-            transition: $transition;
-
-            &:hover {
-                color: var(--hover-color);
-            }
-        }
     }
 
     .package-widget {
@@ -325,7 +307,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 1.5rem 1.5rem;
-            border-bottom: 1px solid var(--gray-color);
+            border-bottom: 1px solid var(--border-color);
             font-size: 1.4rem;
             font-weight: 500;
             color: var(--black-color);
@@ -356,7 +338,7 @@
             align-items: center;
             grid-column-gap: 1.5rem;
             padding: 1.5rem 0;
-            border-bottom: 1px solid var(--gray-color);
+            border-bottom: 1px solid var(--border-color);
             .icon {
                 img {
                     width: 2.4rem;
@@ -388,5 +370,104 @@
         font-size: 1.6rem;
         font-weight: 500;
         color: var(--black-color);
+    }
+}
+.booking-tour-widget {
+    .single-booking-box {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+        .single-booking-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .form-date {
+            width: 9rem;
+            height: 2.4rem;
+            font-family: $bodyFont;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--black-color);
+            border: 1px solid var(--border-color);
+            padding: 0 .5rem;
+        }
+        .booking-title {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--black-color);
+            text-transform: capitalize;
+        }
+        .form-check-inline {
+            display: inline-flex;
+            align-items: center;
+            grid-column-gap: .5rem;
+            padding: 0;
+            .form-check-input {
+                margin: 0;
+                width: 1.6rem;
+                height: 1.6rem;
+                border-radius: 50%;
+                border: 1px solid var(--border-color);
+                box-shadow: none;
+                &:checked {
+                    background-color: var(--primary-color);
+                }
+            }
+            .form-check-label {
+                margin: 0;
+                font-size: 1.4rem;
+                line-height: 1;
+                font-weight: 400;
+                color: var(--black-color);
+                cursor: pointer;
+            }
+        }
+        .form-check {
+            display: flex;
+            align-items: center;
+            grid-column-gap: 1rem;
+            .form-check-input {
+                width: 2.2rem;
+                height: 2.2rem;
+                border-radius: .4rem;
+                border: 1px solid var(--border-color);
+                box-shadow: none;
+                margin-top: 0;
+                &:checked {
+                    background-color: var(--primary-color);
+                }
+            }
+            .form-check-label {
+                margin: 0;
+                font-size: 1.4rem;
+                line-height: 1;
+                font-weight: 500;
+                color: var(--black-color);
+                cursor: pointer;
+            }
+        }
+    }
+    .person-price {
+        display: flex;
+        grid-column-gap: 1rem;
+        grid-row-gap: .5rem;
+        flex-flow: row wrap;
+        li {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--black-color);
+            span {
+                color: var(--gray-color);
+            }
+        }
+    }
+    .toptal-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .total-price {
+            color: var(--primary-color);
+        }
     }
 }

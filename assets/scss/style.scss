@@ -32,6 +32,7 @@ Version: 1.0
 #.package-details-area
 #.primary-tabs
 #.you-may-like-area
+#.single-hotel-page
 
 
 
@@ -39,7 +40,7 @@ Version: 1.0
 */
 
 /*===============================
- #.you-may-like-area
+ #.single-hotel-page
 =================================*/
 
 // variable
@@ -74,4 +75,5 @@ Version: 1.0
 @import "component/package-details-section";
 @import "component/primary-tabs";
 @import "component/you-may-like-area";
+@import "component/single-hotel-page";
 

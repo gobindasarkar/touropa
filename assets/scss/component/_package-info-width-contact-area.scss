@@ -60,6 +60,12 @@
         flex-flow: row wrap;
         margin-top: 3.8rem;
     }
+    .excellent-text {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--primary-color);
+    }
 }
 @media (max-width: 991px) {
     .package-info-width-contact-area .price-area {

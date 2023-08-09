@@ -16,9 +16,11 @@
         flex: 1;
         grid-row-gap: 1rem;
         .single-details {
+            display: flex;
+            flex-direction: column;
             padding: 0 1.5rem;
             border-right: 1px solid var(--gray-color);
-
+            justify-content: center;
             &:last-child {
                 border: none;
             }
