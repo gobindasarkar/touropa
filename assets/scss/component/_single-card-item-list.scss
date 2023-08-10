@@ -130,6 +130,14 @@
                 font-size: 1.4rem;
                 font-weight: 500;
                 color: var(--black-color);
+                img {
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    object-fit: cover;
+                }
+                i {
+                    color: var(--primary-color);
+                }
             }
         }
     }
