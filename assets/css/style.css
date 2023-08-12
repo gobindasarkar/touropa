@@ -778,7 +778,40 @@ scrollUp
  #.hero-banner-area
 =================================*/
 .hero-banner-area {
-  height: 350px;
+  padding: 6rem 0;
+}
+.hero-banner-area .tab-content {
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 0.3rem;
+}
+
+.banner-tabs {
+  justify-content: center;
+  grid-column-gap: 3rem;
+}
+.banner-tabs .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 0.5rem;
+  height: 5rem;
+  min-width: 15rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--gray-color);
+  text-transform: capitalize;
+}
+.banner-tabs .nav-link img {
+  max-width: 2.6rem;
+}
+.banner-tabs .nav-link.active {
+  background-color: var(--primary-color);
+}
+.banner-tabs .nav-link.active img {
+  filter: brightness(0) invert(1);
 }
 
 /*===============================

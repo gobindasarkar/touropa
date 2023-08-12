@@ -2,5 +2,37 @@
  #.hero-banner-area
 =================================*/
 .hero-banner-area {
-    height: 350px;
+    padding: 6rem 0;
+    .tab-content {
+        padding: 1.5rem;
+        background-color: var(--white);
+        border-radius: .3rem;
+    }
+}
+.banner-tabs {
+    justify-content: center;
+    grid-column-gap: 3rem;
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column-gap: .5rem;
+        height: 5rem;
+        min-width: 15rem;
+        padding: .5rem 1rem;
+        background-color: var(--white);
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--gray-color);
+        text-transform: capitalize;
+        img {
+            max-width: 2.6rem;
+        }
+        &.active {
+            background-color: var(--primary-color);
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
 }
