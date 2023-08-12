@@ -34,6 +34,8 @@ Version: 1.0
 #.you-may-like-area
 #.single-hotel-page
 #.contact-area
+#.search-area
+#.visa-area
 
 
 
@@ -41,7 +43,7 @@ Version: 1.0
 */
 
 /*===============================
- #.contact-area
+ #.visa-area
 =================================*/
 
 // variable
@@ -78,4 +80,6 @@ Version: 1.0
 @import "component/you-may-like-area";
 @import "component/single-hotel-page";
 @import "component/contact-area";
+@import "component/search-area";
+@import "component/visa-area";
 

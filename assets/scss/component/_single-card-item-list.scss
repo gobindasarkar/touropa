@@ -163,3 +163,14 @@
         text-align: left;
     }
 }
+@media only screen and (max-width: 1400px) and (min-width: 1200px)  {
+    .single-card-item-list {
+        align-items: flex-start;
+    }
+    .single-card-item-list .card-info .card-info-right {
+        width: 100%;
+    }
+    .single-card-item-list .card-info-right {
+        text-align: left;
+    }
+}

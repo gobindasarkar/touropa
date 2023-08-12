@@ -34,13 +34,15 @@ Version: 1.0
 #.you-may-like-area
 #.single-hotel-page
 #.contact-area
+#.search-area
+#.visa-area
 
 
 
 
 */
 /*===============================
- #.contact-area
+ #.visa-area
 =================================*/
 :root {
   font-size: 62.5%;
@@ -1832,6 +1834,17 @@ scrollUp
     text-align: left;
   }
 }
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+  .single-card-item-list {
+    align-items: flex-start;
+  }
+  .single-card-item-list .card-info .card-info-right {
+    width: 100%;
+  }
+  .single-card-item-list .card-info-right {
+    text-align: left;
+  }
+}
 /*===============================
  #.sidebar-area
 =================================*/
@@ -2242,6 +2255,19 @@ scrollUp
 }
 .booking-tour-widget .toptal-price .total-price {
   color: var(--primary-color);
+}
+
+.call-you-widget .form-group .form-controls {
+  width: 100%;
+  height: 5rem;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--black);
 }
 
 /*===============================
@@ -2897,6 +2923,23 @@ scrollUp
   margin: 0;
 }
 
+.documents-required-list {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+.documents-required-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+.documents-required-list li ul {
+  margin-top: 1.2rem;
+  margin-left: 1.5rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
 @media (max-width: 991px) {
   .primary-tabs .tabs-menu .nav-tabs .nav-item .nav-link {
     font-size: 1.4rem;
@@ -3345,5 +3388,214 @@ scrollUp
 @media (max-width: 575px) {
   .contact-area .contact-right-bottom .contact-info {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*===============================
+ #.search-area
+=================================*/
+.search-area {
+  padding: 12rem 0;
+}
+.search-area h1 {
+  margin-bottom: 2rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.search-form .form-group {
+  display: flex;
+  border-radius: 5.5rem;
+  overflow: hidden;
+}
+.search-form .form-group .form-controls {
+  flex: 1;
+  height: 5.2rem;
+  border: none;
+  box-shadow: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #8E8E8E;
+  padding: 1rem 2.5rem;
+}
+.search-form .form-group .search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.3rem;
+  height: 5.2rem;
+  border: none;
+  box-shadow: none;
+  font-size: 2rem;
+  transition: all 0.5s linear;
+}
+.search-form .form-group .search-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/*===============================
+ #.visa-area
+=================================*/
+.visa-menu {
+  position: relative;
+}
+.visa-menu .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  grid-column-gap: 1.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0px 1px 7px 1px rgba(85, 85, 85, 0.25);
+  background-color: var(--white);
+  border-radius: 0.3rem;
+  padding: 0 2rem;
+}
+.visa-menu .nav-menu li .nav-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--black-color);
+  text-transform: uppercase;
+  grid-column-gap: 0.5rem;
+  transition: all 0.5s linear;
+  padding: 2rem 0;
+}
+.visa-menu .nav-menu li .nav-link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.3rem;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  transition: all 0.5s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+.visa-menu .nav-menu li .nav-link:hover {
+  color: var(--primary-color);
+}
+.visa-menu .nav-menu li .nav-link:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+.visa-menu .nav-menu li.active-menu .nav-link {
+  color: var(--primary-color);
+}
+.visa-menu .nav-menu li.active-menu .nav-link::before {
+  opacity: 1;
+  visibility: visible;
+}
+.visa-menu .nav-menu li.has-mega-menu {
+  position: static;
+}
+.visa-menu .nav-menu li.has-mega-menu .mega-menu {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  grid-row-gap: 1.5rem;
+  left: 0;
+  top: 100%;
+  background-color: #E7F6F9;
+  width: 100%;
+  border-radius: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+  padding: 2rem;
+}
+.visa-menu .nav-menu li.has-mega-menu .mega-menu li {
+  width: 25%;
+  padding: 0 0.5rem;
+}
+.visa-menu .nav-menu li.has-mega-menu .mega-menu li a {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black-color);
+  text-transform: capitalize;
+  transition: all 0.5s linear;
+}
+.visa-menu .nav-menu li.has-mega-menu .mega-menu li a .menu-iocn {
+  width: 2rem;
+  height: auto;
+  object-fit: cover;
+}
+.visa-menu .nav-menu li.has-mega-menu .mega-menu li a:hover {
+  color: var(--primary-color);
+}
+.visa-menu .nav-menu li.has-mega-menu:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.travel-destination-top .title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.single-travel-destination {
+  display: block;
+  border-radius: 0.3rem;
+  background-color: var(--white);
+  box-shadow: 0px 1px 7px 1px rgba(85, 85, 85, 0.25);
+  padding: 1.5rem;
+}
+.single-travel-destination .travel-destination-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+.single-travel-destination .travel-destination-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--black-color);
+  transition: all 0.5s linear;
+}
+.single-travel-destination .travel-destination-info .flag {
+  width: 2rem;
+  height: 1.5rem;
+  object-fit: cover;
+}
+.single-travel-destination:hover .travel-destination-info {
+  color: var(--primary-color);
+}
+
+@media (max-width: 991px) {
+  .visa-menu .nav-menu li.has-mega-menu .mega-menu li {
+    width: 33%;
+  }
+  .visa-menu .nav-menu {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .visa-menu .nav-menu li.has-mega-menu .mega-menu li {
+    width: 50%;
+  }
+  .visa-menu .nav-menu li .nav-link {
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .visa-menu .nav-menu li.has-mega-menu .mega-menu li {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

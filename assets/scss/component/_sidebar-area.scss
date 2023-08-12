@@ -471,3 +471,19 @@
         }
     }
 }
+.call-you-widget {
+    .form-group {
+        .form-controls {
+            width: 100%;
+            height: 5rem;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            font-family: $bodyFont;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--black);
+        }
+    }
+}

@@ -1,0 +1,48 @@
+/*===============================
+ #.search-area
+=================================*/
+.search-area {
+    padding: 12rem 0;
+
+    h1 {
+        margin-bottom: 2rem;
+        font-size: 4.8rem;
+        font-weight: 700;
+        color: var(--white);
+    }
+}
+
+.search-form {
+    .form-group {
+        display: flex;
+        border-radius: 5.5rem;
+        overflow: hidden;
+
+        .form-controls {
+            flex: 1;
+            height: 5.2rem;
+            border: none;
+            box-shadow: none;
+            font-family: $bodyFont;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #8E8E8E;
+            padding: 1rem 2.5rem;
+        }
+        .search-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 8.3rem;
+            height: 5.2rem;
+            border: none;
+            box-shadow: none;
+            font-size: 2rem;
+            transition: $transition;
+            &:hover {
+                background-color: var(--primary-color);
+                color: var(--white);
+            }
+        }
+    }
+}
