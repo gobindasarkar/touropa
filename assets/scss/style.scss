@@ -36,15 +36,14 @@ Version: 1.0
 #.contact-area
 #.search-area
 #.visa-area
+#.text-image-area
 
 
 
 
 */
 
-/*===============================
- #.visa-area
-=================================*/
+
 
 // variable
 @import "variable/_variable.scss";
@@ -82,4 +81,5 @@ Version: 1.0
 @import "component/contact-area";
 @import "component/search-area";
 @import "component/visa-area";
+@import "component/text-image-area";
 
