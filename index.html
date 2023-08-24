@@ -174,9 +174,8 @@
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-Hotel-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-Hotel" type="button" role="tab" aria-controls="pills-Hotel"
-                        aria-selected="false">
+                    <button class="nav-link" id="pills-Hotel-tab" data-bs-toggle="pill" data-bs-target="#pills-Hotel"
+                        type="button" role="tab" aria-controls="pills-Hotel" aria-selected="false">
                         <img src="assets/images/hotel-tabs-icon.svg" alt="hotel">
                         Hotel
                     </button>
@@ -190,18 +189,120 @@
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-Visa-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-Visa" type="button" role="tab" aria-controls="pills-Visa"
-                        aria-selected="false">
+                    <button class="nav-link" id="pills-Visa-tab" data-bs-toggle="pill" data-bs-target="#pills-Visa"
+                        type="button" role="tab" aria-controls="pills-Visa" aria-selected="false">
                         <img src="assets/images/visa-tabs-icon.svg" alt="visa">
                         Visa
                     </button>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-Flight" role="tabpanel" aria-labelledby="pills-Flight-tab"
-                    tabindex="0">
-                    Flight
+                <div class="tab-pane fade show active" id="pills-Flight" role="tabpanel"
+                    aria-labelledby="pills-Flight-tab" tabindex="0">
+                    <form action="#">
+                        <div class="flight-area-wrap">
+                            <div class="flight-area-top">
+                                <div class="top-left">
+                                    <div class="flight-top-left">
+                                        <h4>form</h4>
+                                        <select id="fromLocation" class="location-select">
+                                            <option value="MadridSpain">Madrid Spain</option>
+                                            <option value="Dublinireland">Dublin ireland</option>
+                                        </select>
+                                    </div>
+                                    <button id="swapButton" type="button" class="swap-btn"><img
+                                            src="assets/images/swap.svg" alt="swap"></button>
+                                    <div class="flight-top-right">
+                                        <h4>to</h4>
+                                        <select id="toLocation" class="location-select">
+                                            <option value="Dublinireland">Dublin ireland</option>
+                                            <option value="MadridSpain">Madrid Spain</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="top-right">
+                                    <label class="single-trip"><input type="radio" name="showDiv" value="div1">
+                                        <span>One Way</span></label>
+                                    <label class="single-trip"><input type="radio" name="showDiv" value="div2" checked>
+                                        <span>Round Trip</span></label>
+                                    <label class="single-trip"><input type="radio" name="showDiv" value="div3">
+                                        <span>Multi City</span></label>
+                                </div>
+                            </div>
+                            <div class="flight-area-bottom">
+                                <div id="div1" class="hidden-div">
+                                    Content of Div 1
+                                </div>
+                                <div id="div2" class="hidden-div">
+                                    <div class="serch-wrap">
+                                        <div class="d-date single-search-item">
+                                            <input type="text" id="selectedDDate" readonly hidden>
+                                            <button id="openDCalendar" class="search-dropdoen-btn" type="button">
+                                                <div class="top-text">
+                                                    DEPARTURE <i class="fa-solid fa-angle-down"></i>
+                                                </div>
+                                                <div class="date"><span id="displayDDayNumber"
+                                                        class="day-number"></span><span id="displayDMonth"></span><span
+                                                        id="displayDYear"></span></div>
+                                                <div class="day"><span id="displayDDay"></span></div>
+                                            </button>
+                                        </div>
+                                        <div class="r-date single-search-item">
+                                            <input type="text" id="selectedRDate" readonly hidden>
+                                            <button id="openRCalendar" class="search-dropdoen-btn" type="button">
+                                                <div class="top-text">
+                                                    RETURN <i class="fa-solid fa-angle-down"></i>
+                                                </div>
+                                                <div class="date"><span id="displayRDayNumber"
+                                                        class="day-number"></span><span id="displayRMonth"></span><span
+                                                        id="displayRYear"></span></div>
+                                                <div class="day"><span id="displayRDay"></span></div>
+                                            </button>
+                                        </div>
+                                        <div class="PassengerCabin single-search-item">
+                                            <button id="PassengerCabinbtn" class="search-dropdoen-btn" type="button">
+                                                <div class="top-text">
+                                                    PASSENGER & Cabin CLASS <i class="fa-solid fa-angle-down"></i>
+                                                </div>
+                                                <div class="person-text"><span id="selectedNumPersons">1</span> Person
+                                                </div>
+                                                <div class="class-text"><span id="selectedCabinClass">None</span></div>
+                                            </button>
+                                            <div id="dropdownContainer" style="display: none;" class="dropdown-menu">
+                                                <div class="single-person-class">
+                                                    <h4>Number of Persons:</h4>
+                                                    <button class="decrementButton" id="decrementButton" type="button">-</button>
+                                                    <input class="numPersons" type="number" id="numPersons" min="1" value="1">
+                                                    <button class="incrementButton" id="incrementButton" type="button">+</button>
+                                                </div>
+                                                <div class="single-person-class">
+                                                    <h4>Select Cabin Class:</h4>
+                                                    <div class="single-class-type">
+                                                        <input type="radio" id="economy" name="cabinClass"
+                                                            value="Economy">
+                                                        <label for="economy">Economy</label>
+                                                    </div>
+                                                    <div class="single-class-type">
+                                                        <input type="radio" id="business" name="cabinClass"
+                                                            value="Business">
+                                                        <label for="business">Business</label>
+                                                    </div>
+                                                    <div class="single-class-type">
+                                                        <input type="radio" id="first" name="cabinClass"
+                                                            value="First Class">
+                                                        <label for="first">First Class</label>
+                                                    </div>
+                                                </div>
+                                                <button id="okButton" class="primary-btn" type="button">done</button>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="primary-btn btn-lg">Search Flights</button>
+                                    </div>
+                                </div>
+                                <div id="div3" class="hidden-div">Content of Div 3</div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="tab-pane fade" id="pills-Hotel" role="tabpanel" aria-labelledby="pills-Hotel-tab"
                     tabindex="0">
@@ -1021,7 +1122,7 @@
                         <div class="single-widget">
                             <div class="about-widget">
                                 <a href="index.html" class="footer-logo"><img src="assets/images/touropa-white.png"
-                                    alt="touropa"></a>
+                                        alt="touropa"></a>
                                 <p>Lorem Ipsum passage, and going through the cites of the word in classical literature,
                                     discovered the undoubtable source.</p>
                             </div>
@@ -1087,6 +1188,150 @@
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
     <script src="assets/js/gmaps.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // show hide div
+            $("input[name='showDiv']").change(function () {
+                var selectedValue = $("input[name='showDiv']:checked").val();
+
+                // Hide all divs
+                $(".hidden-div").hide();
+
+                // Show the selected div
+                $("#" + selectedValue).show();
+            });
+
+            // Show the initially selected div
+            var initiallySelectedValue = $("input[name='showDiv']:checked").val();
+            $("#" + initiallySelectedValue).show();
+
+            // swap button 
+            $('#swapButton').click(function () {
+                var fromValue = $('#fromLocation').val();
+                var toValue = $('#toLocation').val();
+
+                $('#fromLocation').val(toValue);
+                $('#toLocation').val(fromValue);
+            });
+
+
+            // DDate 
+            $('#openDCalendar').click(function () {
+                $('#selectedDDate').datepicker('show');
+            });
+            $('#openRCalendar').click(function () {
+                $('#selectedRDate').datepicker('show');
+            });
+
+            var today = new Date();
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var dayName = dayNames[today.getDay()];
+            var monthNames = [
+                "Jan", "Feb", "Mar", "Apr",
+                "May", "Jun", "Jul", "Aug",
+                "Sep", "Oct", "Nov", "Dec"
+            ];
+            var monthIndex = today.getMonth();
+            var formattedMonth = monthNames[monthIndex];
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+
+            var defaultDateString = yyyy + '-' + mm + '-' + dd + '-' + dayName;
+            var defaultDate = new Date(defaultDateString);
+
+            // DDate function 
+            $(function () {
+                $('#selectedDDate').datepicker({
+                    dateFormat: 'dd M yy',
+                    defaultDate: defaultDate,
+                    onSelect: function (dateText, inst) {
+                        var selectedDate = new Date(dateText);
+                        var dayNumber = selectedDate.getDate();
+                        var dayName = $.datepicker.formatDate('DD', selectedDate);
+                        var selectedMonth = $.datepicker.formatDate('M', selectedDate);
+                        var selectedYear = selectedDate.getFullYear();
+                        $('#displayDDayNumber').text(dayNumber);
+                        $('#displayDMonth').text(selectedMonth);
+                        $('#displayDYear').text(selectedYear);
+                        $('#displayDDay').text(dayName);
+                    }
+                });
+                $('#displayDDayNumber').text(dd);
+                $('#displayDMonth').text(formattedMonth);
+                $('#displayDYear').text(yyyy);
+                $('#displayDDay').text(dayName);
+            });
+            // selectedRDate function 
+            $(function () {
+                $('#selectedRDate').datepicker({
+                    dateFormat: 'dd M yy',
+                    defaultDate: defaultDate,
+                    onSelect: function (dateText, inst) {
+                        var selectedDate = new Date(dateText);
+                        var dayNumber = selectedDate.getDate();
+                        var dayName = $.datepicker.formatDate('DD', selectedDate);
+                        var selectedMonth = $.datepicker.formatDate('M', selectedDate);
+                        var selectedYear = selectedDate.getFullYear();
+                        $('#displayRDayNumber').text(dayNumber);
+                        $('#displayRMonth').text(selectedMonth);
+                        $('#displayRYear').text(selectedYear);
+                        $('#displayRDay').text(dayName);
+                    }
+                });
+                $('#displayRDayNumber').text(dd);
+                $('#displayRMonth').text(formattedMonth);
+                $('#displayRYear').text(yyyy);
+                $('#displayRDay').text(dayName);
+            });
+
+
+
+
+
+            const dropdownButton = document.getElementById('PassengerCabinbtn');
+            const dropdownContainer = document.getElementById('dropdownContainer');
+            const numPersonsInput = document.getElementById('numPersons');
+            const incrementButton = document.getElementById('incrementButton');
+            const decrementButton = document.getElementById('decrementButton');
+            const selectedCabinClass = document.getElementById('selectedCabinClass');
+            const selectedNumPersons = document.getElementById('selectedNumPersons');
+            const okButton = document.getElementById('okButton');
+
+            dropdownButton.addEventListener('click', () => {
+                if (dropdownContainer.style.display === 'none') {
+                    dropdownContainer.style.display = 'block';
+                } else {
+                    dropdownContainer.style.display = 'none';
+                }
+            });
+
+            incrementButton.addEventListener('click', () => {
+                numPersonsInput.value = parseInt(numPersonsInput.value) + 1;
+                selectedNumPersons.textContent = numPersonsInput.value;
+            });
+
+            decrementButton.addEventListener('click', () => {
+                if (parseInt(numPersonsInput.value) > 1) {
+                    numPersonsInput.value = parseInt(numPersonsInput.value) - 1;
+                    selectedNumPersons.textContent = numPersonsInput.value;
+                }
+            });
+
+            document.querySelectorAll('input[name="cabinClass"]').forEach((radio) => {
+                radio.addEventListener('change', () => {
+                    selectedCabinClass.textContent = radio.value;
+                });
+            });
+
+            okButton.addEventListener('click', () => {
+                dropdownContainer.style.display = 'none';
+            });
+
+
+
+        });
+    </script>
 </body>
 
 </html>

@@ -812,6 +812,190 @@ scrollUp
   filter: brightness(0) invert(1);
 }
 
+.hidden-div {
+  display: none;
+}
+
+.flight-area-wrap .flight-area-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.flight-area-wrap .flight-area-top .top-left {
+  display: flex;
+  align-items: flex-end;
+}
+.flight-area-wrap .flight-area-top .top-left h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--primary-color);
+}
+.flight-area-wrap .flight-area-top .top-left .location-select {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--black-color);
+  padding: 0;
+  border: none;
+}
+.flight-area-wrap .flight-area-top .top-left .location-select option {
+  font-size: 1.6rem;
+}
+.flight-area-wrap .flight-area-top .top-left .swap-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 0 1rem;
+  width: 3rem;
+  height: 2.2rem;
+  border: 1px solid var(--gray-color);
+  padding: 0;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  transform: translateY(-8px);
+}
+.flight-area-wrap .flight-area-top .top-right .single-trip {
+  display: inline-block;
+  align-items: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--black-color);
+  text-transform: capitalize;
+  margin: 0;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.flight-area-wrap .flight-area-top .top-right .single-trip input {
+  position: relative;
+  top: 1px;
+  margin-right: 0.5rem;
+}
+.flight-area-wrap .flight-area-top .top-right .single-trip:last-child {
+  margin-right: 0;
+}
+
+.serch-wrap {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  border: 1px solid var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+}
+.serch-wrap .single-search-item {
+  position: relative;
+  flex: 1;
+  border-left: 1px solid var(--primary-color);
+  padding: 0 3rem;
+}
+.serch-wrap .single-search-item:first-child {
+  border: none;
+}
+.serch-wrap .search-dropdoen-btn {
+  width: 100%;
+  height: 7.2rem;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  text-align: left;
+}
+.serch-wrap .search-dropdoen-btn .date {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--gray-color);
+  line-height: 1;
+}
+.serch-wrap .search-dropdoen-btn .date .day-number {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--black-color);
+  margin-right: 0.5rem;
+}
+.serch-wrap .search-dropdoen-btn .day {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+.serch-wrap .search-dropdoen-btn .person-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--gray-color);
+  line-height: 1;
+}
+.serch-wrap .search-dropdoen-btn .person-text span {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--black-color);
+  margin-right: 0.5rem;
+}
+.serch-wrap .search-dropdoen-btn .class-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+.serch-wrap .search-dropdoen-btn .top-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+.serch-wrap .dropdown-menu {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.serch-wrap .dropdown-menu .single-person-class {
+  margin-bottom: 1.5rem;
+}
+.serch-wrap .dropdown-menu .single-person-class h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--gray-color);
+  margin-bottom: 1rem;
+}
+.serch-wrap .dropdown-menu .single-person-class .numPersons {
+  width: 8rem;
+  height: 3.6rem;
+  border-radius: 0.5rem;
+  color: var(--black-color);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 1px solid var(--gray-color);
+  margin: 0 1rem;
+}
+.serch-wrap .dropdown-menu .single-person-class .decrementButton, .serch-wrap .dropdown-menu .single-person-class .incrementButton {
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-color);
+  font-size: 1.8rem;
+  background-color: transparent;
+  transition: all 0.5s linear;
+}
+.serch-wrap .dropdown-menu .single-person-class .single-class-type {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--black-color);
+}
+.serch-wrap .dropdown-menu .single-person-class .single-class-type label {
+  margin: 0;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
 /*===============================
  #.popular-destinations-area
 =================================*/
