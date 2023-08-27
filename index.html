@@ -202,24 +202,6 @@
                     <form action="#">
                         <div class="flight-area-wrap">
                             <div class="flight-area-top">
-                                <div class="top-left">
-                                    <div class="flight-top-left">
-                                        <h4>form</h4>
-                                        <select id="fromLocation" class="location-select">
-                                            <option value="MadridSpain">Madrid Spain</option>
-                                            <option value="Dublinireland">Dublin ireland</option>
-                                        </select>
-                                    </div>
-                                    <button id="swapButton" type="button" class="swap-btn"><img
-                                            src="assets/images/swap.svg" alt="swap"></button>
-                                    <div class="flight-top-right">
-                                        <h4>to</h4>
-                                        <select id="toLocation" class="location-select">
-                                            <option value="Dublinireland">Dublin ireland</option>
-                                            <option value="MadridSpain">Madrid Spain</option>
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="top-right">
                                     <label class="single-trip"><input type="radio" name="showDiv" value="div1">
                                         <span>One Way</span></label>
@@ -235,6 +217,53 @@
                                 </div>
                                 <div id="div2" class="hidden-div">
                                     <div class="serch-wrap">
+                                        <div class="dropdown single-search-item" id="Formdropdown">
+                                            <button id="FormdropdownButton" type="button" class="search-dropdoen-btn">
+                                                <div class="top-text">
+                                                    form <i class="fa-solid fa-angle-down"></i>
+                                                </div>
+                                                <div id="Formdropdownvalue" class="form-to-value">select form</div>
+                                            </button>
+                                            <div id="FormdropdownContent" class="dropdown-content dropdown-menu">
+                                                <input type="text" id="FormsearchInput" class="search-dropdown-input"
+                                                    placeholder="Search...">
+                                                <ul id="FormdropdownList" class="dropdown-items">
+                                                    <li>Dublin ireland</li>
+                                                    <li>Madrid Spain</li>
+                                                    <li>Bengaluru</li>
+                                                    <li>Kolkata</li>
+                                                    <li>Hyderabad</li>
+                                                    <li>Goa</li>
+                                                    <li>Chennai</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown single-search-item" id="Todropdown">
+
+                                            <button id="TodropdownButton" type="button" class="search-dropdoen-btn">
+                                                <div class="top-text">
+                                                    to <i class="fa-solid fa-angle-down"></i>
+                                                </div>
+                                                <div id="Todropdownvalue" class="form-to-value">
+                                                    select to
+                                                </div>
+                                            </button>
+                                            <div id="TodropdownContent" class="dropdown-content dropdown-menu">
+                                                <input type="text" id="TosearchInput" class="search-dropdown-input"
+                                                    placeholder="Search...">
+                                                <ul id="TodropdownList" class="dropdown-items">
+                                                    <li>Dublin ireland</li>
+                                                    <li>Madrid Spain</li>
+                                                    <li>Bengaluru</li>
+                                                    <li>Kolkata</li>
+                                                    <li>Hyderabad</li>
+                                                    <li>Goa</li>
+                                                    <li>Chennai</li>
+                                                </ul>
+                                            </div>
+                                            <button id="swapButton" type="button" class="swap-btn"><img
+                                                    src="assets/images/swap.svg" alt="swap"></button>
+                                        </div>
                                         <div class="d-date single-search-item">
                                             <input type="text" id="selectedDDate" readonly hidden>
                                             <button id="openDCalendar" class="search-dropdoen-btn" type="button">
@@ -262,20 +291,48 @@
                                         <div class="PassengerCabin single-search-item">
                                             <button id="PassengerCabinbtn" class="search-dropdoen-btn" type="button">
                                                 <div class="top-text">
-                                                    PASSENGER & Cabin CLASS <i class="fa-solid fa-angle-down"></i>
+                                                    TRAVELLER & CLASS <i class="fa-solid fa-angle-down"></i>
                                                 </div>
-                                                <div class="person-text"><span id="selectedNumPersons">1</span> Person
+                                                <div class="person-text"><span id="totalPersons">1</span> Person
                                                 </div>
                                                 <div class="class-text"><span id="selectedCabinClass">None</span></div>
                                             </button>
                                             <div id="dropdownContainer" style="display: none;" class="dropdown-menu">
-                                                <div class="single-person-class">
-                                                    <h4>Number of Persons:</h4>
-                                                    <button class="decrementButton" id="decrementButton" type="button">-</button>
-                                                    <input class="numPersons" type="number" id="numPersons" min="1" value="1">
-                                                    <button class="incrementButton" id="incrementButton" type="button">+</button>
+                                                <div class="single-person-class d-flex align-items-center justify-content-between">
+                                                    <label>Adults:</label>
+                                                    <div class="inc-dec-wrap">
+                                                        <button type="button" class="decrementButton"
+                                                            id="adultDecrementButton">-</button>
+                                                        <input type="text" class="numPersons" id="adultNumPersons"
+                                                            value="1" readonly>
+                                                        <button type="button" class="incrementButton"
+                                                            id="adultIncrementButton">+</button>
+                                                    </div>
                                                 </div>
-                                                <div class="single-person-class">
+                                                <div class="single-person-class d-flex align-items-center justify-content-between">
+                                                    <label>Children:</label>
+                                                    <div class="inc-dec-wrap">
+                                                        <button type="button" class="decrementButton"
+                                                            id="childrenDecrementButton">-</button>
+                                                        <input type="text" class="numPersons" id="childrenNumPersons"
+                                                            value="0" readonly>
+                                                        <button type="button" class="incrementButton"
+                                                            id="childrenIncrementButton">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="single-person-class d-flex align-items-center justify-content-between">
+                                                    <label>Infants:</label>
+                                                    <div class="inc-dec-wrap">
+                                                        <button type="button" class="decrementButton"
+                                                            id="infantDecrementButton">-</button>
+                                                        <input type="text" class="numPersons" id="infantNumPersons"
+                                                            value="0" readonly>
+                                                        <button type="button" class="incrementButton"
+                                                            id="infantIncrementButton">+</button>
+
+                                                    </div>
+                                                </div>
+                                                <div class="single-person-class mt-4">
                                                     <h4>Select Cabin Class:</h4>
                                                     <div class="single-class-type">
                                                         <input type="radio" id="economy" name="cabinClass"
@@ -1181,6 +1238,11 @@
         </div>
     </footer>
     <!-- footer area end here  -->
+
+
+
+
+
     <!-- js file  -->
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -1189,6 +1251,221 @@
     <script src="assets/js/gmaps.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+        // Form to flight
+        document.addEventListener("DOMContentLoaded", function () {
+            const formDropdownButton = document.getElementById("FormdropdownButton");
+            const Formdropdownvalue = document.getElementById("Formdropdownvalue");
+            const formDropdownContent = document.getElementById("FormdropdownContent");
+            const formSearchInput = document.getElementById("FormsearchInput");
+            const formDropdownList = document.getElementById("FormdropdownList").getElementsByTagName("li");
+            const toDropdownButton = document.getElementById("TodropdownButton");
+            const Todropdownvalue = document.getElementById("Todropdownvalue");
+            const toDropdownContent = document.getElementById("TodropdownContent");
+            const toSearchInput = document.getElementById("TosearchInput");
+            const toDropdownList = document.getElementById("TodropdownList").getElementsByTagName("li");
+            const swapButton = document.getElementById("swapButton");
+
+            const defaultFromValue = "Madrid Spain";
+            const defaultToValue = "Dublin ireland";
+
+            Formdropdownvalue.textContent = defaultFromValue;
+            Todropdownvalue.textContent = defaultToValue;
+
+            // Function to toggle dropdown content visibility
+            function toggleDropdown(dropdownButton, dropdownContent) {
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            }
+
+            // Handle item click in form dropdown
+            for (const item of formDropdownList) {
+                item.addEventListener("click", function () {
+                    const selectedValue = item.textContent;
+                    Formdropdownvalue.textContent = selectedValue;
+                    formDropdownContent.style.display = "none";
+                });
+            }
+
+            // Handle item click in "to" dropdown
+            for (const item of toDropdownList) {
+                item.addEventListener("click", function () {
+                    const selectedValue = item.textContent;
+                    Todropdownvalue.textContent = selectedValue;
+                    toDropdownContent.style.display = "none";
+                });
+            }
+
+            // Toggle form dropdown content visibility
+            formDropdownButton.addEventListener("click", function () {
+                toggleDropdown(formDropdownButton, formDropdownContent);
+                // Close the other dropdown
+                toDropdownContent.style.display = "none";
+            });
+
+            // Toggle "to" dropdown content visibility
+            toDropdownButton.addEventListener("click", function () {
+                toggleDropdown(toDropdownButton, toDropdownContent);
+                // Close the other dropdown
+                formDropdownContent.style.display = "none";
+            });
+
+            // Swap dropdowns when the swap button is clicked
+            swapButton.addEventListener("click", function () {
+                const formSelectedValue = Formdropdownvalue.textContent;
+                const toSelectedValue = Todropdownvalue.textContent;
+
+                // Swap the selected values
+                Formdropdownvalue.textContent = toSelectedValue;
+                Todropdownvalue.textContent = formSelectedValue;
+
+                // Swap the input field values
+                const formSearchValue = formSearchInput.value;
+                const toSearchValue = toSearchInput.value;
+                formSearchInput.value = toSearchValue;
+                toSearchInput.value = formSearchValue;
+            });
+
+            // Filter items in form dropdown based on search input
+            formSearchInput.addEventListener("input", function () {
+                const searchTerm = formSearchInput.value.toLowerCase();
+                for (const item of formDropdownList) {
+                    const itemText = item.textContent.toLowerCase();
+                    if (itemText.includes(searchTerm)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                }
+            });
+
+            // Filter items in "to" dropdown based on search input
+            toSearchInput.addEventListener("input", function () {
+                const searchTerm = toSearchInput.value.toLowerCase();
+                for (const item of toDropdownList) {
+                    const itemText = item.textContent.toLowerCase();
+                    if (itemText.includes(searchTerm)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                }
+            });
+        });
+
+        // PassengerCabinbtn area 
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownButton = document.getElementById('PassengerCabinbtn');
+            const dropdownContainer = document.getElementById('dropdownContainer');
+            const adultIncrementButton = document.getElementById('adultIncrementButton');
+            const adultDecrementButton = document.getElementById('adultDecrementButton');
+            const childrenIncrementButton = document.getElementById('childrenIncrementButton');
+            const childrenDecrementButton = document.getElementById('childrenDecrementButton');
+            const infantIncrementButton = document.getElementById('infantIncrementButton');
+            const infantDecrementButton = document.getElementById('infantDecrementButton');
+            const adultNumPersons = document.getElementById('adultNumPersons');
+            const childrenNumPersons = document.getElementById('childrenNumPersons');
+            const infantNumPersons = document.getElementById('infantNumPersons');
+            const totalPersonsSpan = document.getElementById('totalPersons');
+            const selectedCabinClass = document.getElementById('selectedCabinClass');
+            const selectedNumPersons = document.getElementById('selectedNumPersons');
+            const okButton = document.getElementById('okButton');
+
+            dropdownButton.addEventListener('click', () => {
+                if (dropdownContainer.style.display === 'none') {
+                    dropdownContainer.style.display = 'block';
+                } else {
+                    dropdownContainer.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                const targetElement = event.target;
+                if (!dropdownContainer.contains(targetElement) && !passengerCabinBtn.contains(targetElement)) {
+                    dropdownContainer.style.display = 'none';
+                }
+            });
+
+            let adultCount = 1;
+            let childrenCount = 0;
+            let infantCount = 0;
+
+            function updateTotalPersons() {
+                const total = adultCount + childrenCount + infantCount;
+                totalPersonsSpan.textContent = total;
+            }
+
+            adultIncrementButton.addEventListener('click', () => {
+                adultNumPersons.value = parseInt(adultNumPersons.value) + 1;
+                adultCount++;
+                updateTotalPersons();
+            });
+
+            adultDecrementButton.addEventListener('click', () => {
+                if (adultCount > 1) {
+                    adultNumPersons.value = parseInt(adultNumPersons.value) - 1;
+                    adultCount--;
+                    updateTotalPersons();
+                }
+            });
+
+            childrenIncrementButton.addEventListener('click', () => {
+                childrenNumPersons.value = parseInt(childrenNumPersons.value) + 1;
+                childrenCount++;
+                updateTotalPersons();
+            });
+
+            childrenDecrementButton.addEventListener('click', () => {
+                if (childrenCount > 0) {
+                    childrenNumPersons.value = parseInt(childrenNumPersons.value) - 1;
+                    childrenCount--;
+                    updateTotalPersons();
+                }
+            });
+
+            infantIncrementButton.addEventListener('click', () => {
+                infantCount++;
+                infantNumPersons.value = parseInt(infantNumPersons.value) + 1;
+                updateTotalPersons();
+            });
+
+            infantDecrementButton.addEventListener('click', () => {
+                if (infantCount > 0) {
+                    infantNumPersons.value = parseInt(infantNumPersons.value) - 1;
+                    infantCount--;
+                    updateTotalPersons();
+                }
+            });
+
+            updateTotalPersons();
+
+            document.querySelectorAll('input[name="cabinClass"]').forEach((radio) => {
+                radio.addEventListener('change', () => {
+                    selectedCabinClass.textContent = radio.value;
+                });
+            });
+
+            okButton.addEventListener('click', () => {
+                dropdownContainer.style.display = 'none';
+            });
+
+            document.addEventListener('click', (event) => {
+                const targetElement = event.target;
+                if (!dropdownContainer.contains(targetElement) && !toggleButton.contains(targetElement)) {
+                    dropdownContainer.style.display = 'none';
+                }
+            });
+            // Hide the dropdown container when clicking outside of it
+            document.addEventListener("click", function (event) {
+                if (!dropdownButton.contains(event.target) && !dropdownContainer.contains(event.target)) {
+                    dropdownContainer.style.display = "none";
+                }
+            });
+        });
+
         $(document).ready(function () {
             // show hide div
             $("input[name='showDiv']").change(function () {
@@ -1205,14 +1482,6 @@
             var initiallySelectedValue = $("input[name='showDiv']:checked").val();
             $("#" + initiallySelectedValue).show();
 
-            // swap button 
-            $('#swapButton').click(function () {
-                var fromValue = $('#fromLocation').val();
-                var toValue = $('#toLocation').val();
-
-                $('#fromLocation').val(toValue);
-                $('#toLocation').val(fromValue);
-            });
 
 
             // DDate 
@@ -1284,52 +1553,6 @@
                 $('#displayRYear').text(yyyy);
                 $('#displayRDay').text(dayName);
             });
-
-
-
-
-
-            const dropdownButton = document.getElementById('PassengerCabinbtn');
-            const dropdownContainer = document.getElementById('dropdownContainer');
-            const numPersonsInput = document.getElementById('numPersons');
-            const incrementButton = document.getElementById('incrementButton');
-            const decrementButton = document.getElementById('decrementButton');
-            const selectedCabinClass = document.getElementById('selectedCabinClass');
-            const selectedNumPersons = document.getElementById('selectedNumPersons');
-            const okButton = document.getElementById('okButton');
-
-            dropdownButton.addEventListener('click', () => {
-                if (dropdownContainer.style.display === 'none') {
-                    dropdownContainer.style.display = 'block';
-                } else {
-                    dropdownContainer.style.display = 'none';
-                }
-            });
-
-            incrementButton.addEventListener('click', () => {
-                numPersonsInput.value = parseInt(numPersonsInput.value) + 1;
-                selectedNumPersons.textContent = numPersonsInput.value;
-            });
-
-            decrementButton.addEventListener('click', () => {
-                if (parseInt(numPersonsInput.value) > 1) {
-                    numPersonsInput.value = parseInt(numPersonsInput.value) - 1;
-                    selectedNumPersons.textContent = numPersonsInput.value;
-                }
-            });
-
-            document.querySelectorAll('input[name="cabinClass"]').forEach((radio) => {
-                radio.addEventListener('change', () => {
-                    selectedCabinClass.textContent = radio.value;
-                });
-            });
-
-            okButton.addEventListener('click', () => {
-                dropdownContainer.style.display = 'none';
-            });
-
-
-
         });
     </script>
 </body>
