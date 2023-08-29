@@ -850,6 +850,10 @@ scrollUp
   border: 1px solid var(--primary-color);
   padding: 1.5rem;
   border-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+.serch-wrap:last-child {
+  margin-bottom: 0;
 }
 .serch-wrap .single-search-item {
   position: relative;
@@ -1049,6 +1053,32 @@ scrollUp
 }
 .serch-wrap .dropdown-content .dropdown-items li:hover {
   color: var(--primary-color);
+}
+
+.add-city-search {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  grid-gap: 1rem;
+  justify-content: flex-end;
+}
+
+.trash-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  transition: all 0.5s linear;
+}
+.trash-btn:hover {
+  color: var(--white);
+  background-color: #dc3545;
 }
 
 /*===============================
