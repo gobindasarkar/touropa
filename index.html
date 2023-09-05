@@ -711,48 +711,50 @@
                             </button>
                         </div>
                         <div class="PassengerCabin single-search-item">
-                            <button id="PassengerCabinbtn" class="search-dropdoen-btn" type="button">
+                            <button id="PassengerCabinHotelbtn" class="search-dropdoen-btn" type="button">
                                 <div class="top-text">
                                     TRAVELLER & CLASS <i class="fa-solid fa-angle-down"></i>
                                 </div>
-                                <div class="person-text"><span id="totalPersons">1</span> Person / Rooms: <span
+                                <div class="person-text"><span id="totalPersonsHotel">1</span> Person / Rooms: <span
                                         id="selectedNumRooms">1</span> </span> </div>
-                                <div class="class-text"><span id="selectedValues">None</span></div>
+                                <div class="class-text"><span id="selectedValuesHotel">None</span></div>
                             </button>
-                            <div id="dropdownContainer" style="display: none;" class="dropdown-menu">
+                            <div id="dropdownContainerHotel" style="display: none;" class="dropdown-menu">
                                 <div class="single-person-class d-flex align-items-center justify-content-between">
                                     <label>Adults:</label>
                                     <div class="inc-dec-wrap">
                                         <button type="button" class="decrementButton"
-                                            id="adultDecrementButton">-</button>
-                                        <input type="text" class="numPersons" id="adultNumPersons" value="1" readonly>
+                                            id="adultDecrementButtonHotel">-</button>
+                                        <input type="text" class="numPersons" id="adultNumPersonsHotel" value="1"
+                                            readonly>
                                         <button type="button" class="incrementButton"
-                                            id="adultIncrementButton">+</button>
+                                            id="adultIncrementButtonHotel">+</button>
                                     </div>
                                 </div>
                                 <div class="single-person-class d-flex align-items-center justify-content-between">
                                     <label>Children:</label>
                                     <div class="inc-dec-wrap">
                                         <button type="button" class="decrementButton"
-                                            id="childrenDecrementButton">-</button>
-                                        <input type="text" class="numPersons" id="childrenNumPersons" value="0"
+                                            id="childrenDecrementButtonHotel">-</button>
+                                        <input type="text" class="numPersons" id="childrenNumPersonsHotel" value="0"
                                             readonly>
                                         <button type="button" class="incrementButton"
-                                            id="childrenIncrementButton">+</button>
+                                            id="childrenIncrementButtonHotel">+</button>
                                     </div>
                                 </div>
                                 <div class="single-person-class d-flex align-items-center justify-content-between">
                                     <label>Infants:</label>
                                     <div class="inc-dec-wrap">
                                         <button type="button" class="decrementButton"
-                                            id="infantDecrementButton">-</button>
-                                        <input type="text" class="numPersons" id="infantNumPersons" value="0" readonly>
+                                            id="infantDecrementButtonHotel">-</button>
+                                        <input type="text" class="numPersons" id="infantNumPersonsHotel" value="0"
+                                            readonly>
                                         <button type="button" class="incrementButton"
-                                            id="infantIncrementButton">+</button>
+                                            id="infantIncrementButtonHotel">+</button>
                                     </div>
                                 </div>
                                 <div class="single-person-class d-flex align-items-center justify-content-between">
-                                    <label>rooms:</label>
+                                    <label>room:</label>
                                     <div class="inc-dec-wrap">
                                         <button id="roomDecrementButton" type="button"
                                             class="decrementButton">-</button>
@@ -776,7 +778,7 @@
                                         <label for="7stare">7 stare</label>
                                     </div>
                                 </div>
-                                <button id="okButton" class="primary-btn" type="button">done</button>
+                                <button id="okButtonHotel" class="primary-btn" type="button">done</button>
                             </div>
                         </div>
                         <button type="submit" class="primary-btn btn-lg">Search Flights</button>
@@ -2418,21 +2420,7 @@
                 formDropdownContentMultiCity.style.display = "none";
             });
 
-            // Swap dropdowns when the swap button is clicked
-            swapButton.addEventListener("click", function () {
-                const formSelectedValue = FormdropdownvalueMultiCity.textContent;
-                const toSelectedValue = TodropdownvalueMultiCity.textContent;
-
-                // Swap the selected values
-                FormdropdownvalueMultiCity.textContent = toSelectedValue;
-                TodropdownvalueMultiCity.textContent = formSelectedValue;
-
-                // Swap the input field values
-                const formSearchValue = formSearchInputMultiCity.value;
-                const toSearchValue = toSearchInputMultiCity.value;
-                formSearchInputMultiCity.value = toSearchValue;
-                toSearchInputMultiCity.value = formSearchValue;
-            });
+           
 
             // Filter items in form dropdown based on search input
             formSearchInputMultiCity.addEventListener("input", function () {
@@ -2972,21 +2960,21 @@
             });
         });
 
-        // PassengerCabinbtn area 
+        // PassengerCabinHotelbtn area 
 
         document.addEventListener("DOMContentLoaded", function () {
-            const dropdownButton = document.getElementById('PassengerCabinbtn');
-            const dropdownContainer = document.getElementById('dropdownContainer');
-            const adultIncrementButton = document.getElementById('adultIncrementButton');
-            const adultDecrementButton = document.getElementById('adultDecrementButton');
-            const childrenIncrementButton = document.getElementById('childrenIncrementButton');
-            const childrenDecrementButton = document.getElementById('childrenDecrementButton');
-            const infantIncrementButton = document.getElementById('infantIncrementButton');
-            const infantDecrementButton = document.getElementById('infantDecrementButton');
-            const adultNumPersons = document.getElementById('adultNumPersons');
-            const childrenNumPersons = document.getElementById('childrenNumPersons');
-            const infantNumPersons = document.getElementById('infantNumPersons');
-            const totalPersonsSpan = document.getElementById('totalPersons');
+            const dropdownButton = document.getElementById('PassengerCabinHotelbtn');
+            const dropdownContainerHotel = document.getElementById('dropdownContainerHotel');
+            const adultIncrementButtonHotel = document.getElementById('adultIncrementButtonHotel');
+            const adultDecrementButtonHotel = document.getElementById('adultDecrementButtonHotel');
+            const childrenIncrementButtonHotel = document.getElementById('childrenIncrementButtonHotel');
+            const childrenDecrementButtonHotel = document.getElementById('childrenDecrementButtonHotel');
+            const infantIncrementButtonHotel = document.getElementById('infantIncrementButtonHotel');
+            const infantDecrementButtonHotel = document.getElementById('infantDecrementButtonHotel');
+            const adultNumPersonsHotel = document.getElementById('adultNumPersonsHotel');
+            const childrenNumPersonsHotel = document.getElementById('childrenNumPersonsHotel');
+            const infantNumPersonsHotel = document.getElementById('infantNumPersonsHotel');
+            const totalPersonsHotelSpan = document.getElementById('totalPersonsHotel');
             const selectedCabinClass = document.getElementById('selectedCabinClass');
             const selectedNumPersons = document.getElementById('selectedNumPersons');
             // rooms 
@@ -2995,20 +2983,20 @@
             const roomNumRooms = document.getElementById('roomNumRooms');
             const selectedNumRooms = document.getElementById('selectedNumRooms');
 
-            const okButton = document.getElementById('okButton');
+            const okButtonHotel = document.getElementById('okButtonHotel');
 
             dropdownButton.addEventListener('click', () => {
-                if (dropdownContainer.style.display === 'none') {
-                    dropdownContainer.style.display = 'block';
+                if (dropdownContainerHotel.style.display === 'none') {
+                    dropdownContainerHotel.style.display = 'block';
                 } else {
-                    dropdownContainer.style.display = 'none';
+                    dropdownContainerHotel.style.display = 'none';
                 }
             });
 
             document.addEventListener('click', (event) => {
                 const targetElement = event.target;
-                if (!dropdownContainer.contains(targetElement) && !passengerCabinBtn.contains(targetElement)) {
-                    dropdownContainer.style.display = 'none';
+                if (!dropdownContainerHotel.contains(targetElement) && !passengerCabinHotelBtn.contains(targetElement)) {
+                    dropdownContainerHotel.style.display = 'none';
                 }
             });
 
@@ -3018,54 +3006,54 @@
             let roomCount = 1;
 
 
-            function updateTotalPersons() {
+            function updateTotalPersonsHotel() {
                 const total = adultCount + childrenCount + infantCount;
-                totalPersonsSpan.textContent = total;
+                totalPersonsHotelSpan.textContent = total;
             }
 
-            adultIncrementButton.addEventListener('click', () => {
-                adultNumPersons.value = parseInt(adultNumPersons.value) + 1;
+            adultIncrementButtonHotel.addEventListener('click', () => {
+                adultNumPersonsHotel.value = parseInt(adultNumPersonsHotel.value) + 1;
                 adultCount++;
-                updateTotalPersons();
+                updateTotalPersonsHotel();
             });
 
-            adultDecrementButton.addEventListener('click', () => {
+            adultDecrementButtonHotel.addEventListener('click', () => {
                 if (adultCount > 1) {
-                    adultNumPersons.value = parseInt(adultNumPersons.value) - 1;
+                    adultNumPersonsHotel.value = parseInt(adultNumPersonsHotel.value) - 1;
                     adultCount--;
-                    updateTotalPersons();
+                    updateTotalPersonsHotel();
                 }
             });
 
-            childrenIncrementButton.addEventListener('click', () => {
-                childrenNumPersons.value = parseInt(childrenNumPersons.value) + 1;
+            childrenIncrementButtonHotel.addEventListener('click', () => {
+                childrenNumPersonsHotel.value = parseInt(childrenNumPersonsHotel.value) + 1;
                 childrenCount++;
-                updateTotalPersons();
+                updateTotalPersonsHotel();
             });
 
-            childrenDecrementButton.addEventListener('click', () => {
+            childrenDecrementButtonHotel.addEventListener('click', () => {
                 if (childrenCount > 0) {
-                    childrenNumPersons.value = parseInt(childrenNumPersons.value) - 1;
+                    childrenNumPersonsHotel.value = parseInt(childrenNumPersonsHotel.value) - 1;
                     childrenCount--;
-                    updateTotalPersons();
+                    updateTotalPersonsHotel();
                 }
             });
 
-            infantIncrementButton.addEventListener('click', () => {
+            infantIncrementButtonHotel.addEventListener('click', () => {
                 infantCount++;
-                infantNumPersons.value = parseInt(infantNumPersons.value) + 1;
-                updateTotalPersons();
+                infantNumPersonsHotel.value = parseInt(infantNumPersonsHotel.value) + 1;
+                updateTotalPersonsHotel();
             });
 
-            infantDecrementButton.addEventListener('click', () => {
+            infantDecrementButtonHotel.addEventListener('click', () => {
                 if (infantCount > 0) {
-                    infantNumPersons.value = parseInt(infantNumPersons.value) - 1;
+                    infantNumPersonsHotel.value = parseInt(infantNumPersonsHotel.value) - 1;
                     infantCount--;
-                    updateTotalPersons();
+                    updateTotalPersonsHotel();
                 }
             });
 
-            updateTotalPersons();
+            updateTotalPersonsHotel();
 
 
             // for rooms 
@@ -3098,34 +3086,34 @@
             checkboxes.forEach((checkbox) => {
                 checkbox.addEventListener('change', () => {
                     // Create an array to store the checked values
-                    const selectedValues = [];
+                    const selectedValuesHotel = [];
 
                     // Iterate through checkboxes and check if they are checked
                     checkboxes.forEach((checkbox) => {
                         if (checkbox.checked) {
-                            selectedValues.push(checkbox.value);
+                            selectedValuesHotel.push(checkbox.value);
                         }
                     });
 
                     // Display the selected values
-                    document.getElementById('selectedValues').textContent = `${selectedValues.join(', ')}`;
+                    document.getElementById('selectedValuesHotel').textContent = `${selectedValuesHotel.join(', ')}`;
                 });
             });
 
-            okButton.addEventListener('click', () => {
-                dropdownContainer.style.display = 'none';
+            okButtonHotel.addEventListener('click', () => {
+                dropdownContainerHotel.style.display = 'none';
             });
 
             document.addEventListener('click', (event) => {
                 const targetElement = event.target;
-                if (!dropdownContainer.contains(targetElement) && !toggleButton.contains(targetElement)) {
-                    dropdownContainer.style.display = 'none';
+                if (!dropdownContainerHotel.contains(targetElement) && !toggleButton.contains(targetElement)) {
+                    dropdownContainerHotel.style.display = 'none';
                 }
             });
             // Hide the dropdown container when clicking outside of it
             document.addEventListener("click", function (event) {
-                if (!dropdownButton.contains(event.target) && !dropdownContainer.contains(event.target)) {
-                    dropdownContainer.style.display = "none";
+                if (!dropdownButton.contains(event.target) && !dropdownContainerHotel.contains(event.target)) {
+                    dropdownContainerHotel.style.display = "none";
                 }
             });
         });
