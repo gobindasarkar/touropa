@@ -502,6 +502,11 @@
     }
 }
 
+@media (max-width: 1399px) {
+    .primary-tabs .tabs-menu .nav-tabs .nav-item .nav-link {
+        font-size: 1.2rem;
+    }
+}
 @media (max-width: 991px) {
     .primary-tabs .tabs-menu .nav-tabs .nav-item .nav-link {
         font-size: 1.4rem;
