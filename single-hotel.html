@@ -229,29 +229,114 @@
                 <div class="col-lg-12 mb-5">
                     <div class="package-details-area">
                         <div class="package-details-left">
-                            <div class="single-details">
-                                <h4>From City</h4>
-                                <h3>Singapore</h3>
-                            </div>
-                            <div class="single-details">
-                                <h4>Check-in</h4>
-                                <h3>12 <small>Mar’23 Wednesday</small></h3>
-                            </div>
-                            <div class="single-details">
-                                <h3>01 <small>Night</small></h3>
-                            </div>
-                            <div class="single-details">
-                                <h4>Check-in</h4>
-                                <h3>22 <small>Mar’23 Wednesday</small></h3>
-                            </div>
-                            <div class="single-details">
-                                <h4>RoomS & Guests</h4>
-                                <h3>01 <small>room</small> 02 <small>Guests</small></h3>
+                            <div class="dropdown single-search-item" id="Formdropdown">
+                                <button id="hotemdropdownButton" type="button" class="search-dropdoen-btn">
+                                    <div class="top-text">
+                                        city <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div id="hotemdropdownvalue" class="form-to-value">select form</div>
+                                </button>
+                                <div id="hoteldropdownContent" class="dropdown-content dropdown-menu">
+                                    <input type="text" id="hotelsearchInput" class="search-dropdown-input"
+                                        placeholder="Search...">
+                                    <ul id="hoteldropdownList" class="dropdown-items">
+                                        <li>Dublin Ireland</li>
+                                        <li>Madrid Spain</li>
+                                        <li>Bengaluru</li>
+                                        <li>Kolkata</li>
+                                        <li>Hyderabad</li>
+                                        <li>Goa</li>
+                                        <li>Chennai</li>
+                                    </ul>
+                                </div>
                             </div>
 
+                            <div class="d-date single-search-item">
+                                <input type="text" id="selectedDDatehotel" readonly hidden>
+                                <button id="openDCalendarhotel" class="search-dropdoen-btn" type="button">
+                                    <div class="top-text">
+                                        DEPARTURE <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div class="date"><span id="displayDDayNumberhoel" class="day-number"></span><span
+                                            id="displayDMonthhotel"></span><span id="displayDYearhotel"></span></div>
+                                    <div class="day"><span id="displayRDayhotel"></span></div>
+                                </button>
+                            </div>
+                            <div class="PassengerCabin single-search-item">
+                                <button id="PassengerCabinHotelbtn" class="search-dropdoen-btn" type="button">
+                                    <div class="top-text">
+                                        TRAVELLER & CLASS <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div class="person-text"><span id="totalPersonsHotel">1</span> Person / Rooms: <span
+                                            id="selectedNumRooms">1</span> </span> </div>
+                                    <div class="class-text"><span id="selectedValuesHotel">None</span></div>
+                                </button>
+                                <div id="dropdownContainerHotel" style="display: none;" class="dropdown-menu">
+                                    <div class="single-person-class d-flex align-items-center justify-content-between">
+                                        <label>Adults:</label>
+                                        <div class="inc-dec-wrap">
+                                            <button type="button" class="decrementButton"
+                                                id="adultDecrementButtonHotel">-</button>
+                                            <input type="text" class="numPersons" id="adultNumPersonsHotel" value="1"
+                                                readonly>
+                                            <button type="button" class="incrementButton"
+                                                id="adultIncrementButtonHotel">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-person-class d-flex align-items-center justify-content-between">
+                                        <label>Children:</label>
+                                        <div class="inc-dec-wrap">
+                                            <button type="button" class="decrementButton"
+                                                id="childrenDecrementButtonHotel">-</button>
+                                            <input type="text" class="numPersons" id="childrenNumPersonsHotel" value="0"
+                                                readonly>
+                                            <button type="button" class="incrementButton"
+                                                id="childrenIncrementButtonHotel">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-person-class d-flex align-items-center justify-content-between">
+                                        <label>Infants:</label>
+                                        <div class="inc-dec-wrap">
+                                            <button type="button" class="decrementButton"
+                                                id="infantDecrementButtonHotel">-</button>
+                                            <input type="text" class="numPersons" id="infantNumPersonsHotel" value="0"
+                                                readonly>
+                                            <button type="button" class="incrementButton"
+                                                id="infantIncrementButtonHotel">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-person-class d-flex align-items-center justify-content-between">
+                                        <label>room:</label>
+                                        <div class="inc-dec-wrap">
+                                            <button id="roomDecrementButton" type="button"
+                                                class="decrementButton">-</button>
+                                            <input type="text" class="numPersons" id="roomNumRooms" value="1">
+                                            <button id="roomIncrementButton" type="button"
+                                                class="incrementButton">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-person-class mt-4">
+                                        <h4>hotels</h4>
+                                        <div class="single-class-type">
+                                            <input type="checkbox" id="3star" name="hotelstare" value="3star">
+                                            <label for="3star">3 star</label>
+                                        </div>
+                                        <div class="single-class-type">
+                                            <input type="checkbox" id="5star" name="hotelstare" value="5star">
+                                            <label for="5star">5 star</label>
+                                        </div>
+                                        <div class="single-class-type">
+                                            <input type="checkbox" id="7stare" name="hotelstare" value="7stare">
+                                            <label for="7stare">7 stare</label>
+                                        </div>
+                                    </div>
+                                    <button id="okButtonHotel" class="primary-btn" type="button">done</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="package-details-right">
-                            <button class="primary-btn-outline dark-btn">MODIFY SEARCH</button>
+                            <button class="primary-btn-outline dark-btn">MODIFY</button>
+                            <button class="primary-btn-outline">DOWNLOAD</button>
                         </div>
                     </div>
                 </div>
@@ -610,18 +695,22 @@
                                                     <img src="assets/images/airport-icon.png" alt="airport-icon">
                                                     <div class="top-title-info">
                                                         <h4>Nearest Airport</h4>
-                                                        <p>Singapore International Airport      <span class="ms-4">34.50 KM</span></p>
+                                                        <p>Singapore International Airport <span class="ms-4">34.50
+                                                                KM</span></p>
                                                     </div>
                                                 </div>
-                                                <ul
-                                                    class="feature-list-items feature-list-item-column-three">
+                                                <ul class="feature-list-items feature-list-item-column-three">
                                                     <li class="feature-text">Arumbol Market <span>1.86km</span></li>
-                                                    <li class="feature-text">Dolphins Safari Start Point <span>3.97km</span></li>
+                                                    <li class="feature-text">Dolphins Safari Start Point
+                                                        <span>3.97km</span>
+                                                    </li>
                                                     <li class="feature-text">Arambol Beach <span>2.09km</span></li>
                                                     <li class="feature-text">Arumbol Market <span>2.87km</span></li>
                                                     <li class="feature-text">Paragliding <span>1.45km</span></li>
                                                     <li class="feature-text">Arumbol Market <span>1.65km</span></li>
-                                                    <li class="feature-text">Mini Bird Sanctury Start Point <span>1.77km</span></li>
+                                                    <li class="feature-text">Mini Bird Sanctury Start Point
+                                                        <span>1.77km</span>
+                                                    </li>
                                                     <li class="feature-text">Mandrem Beach <span>2.54km</span></li>
                                                     <li class="feature-text">Ashvem Beach <span>1.55km</span></li>
                                                     <li class="feature-text">Vithaldas Beach <span>1.56km</span></li>
@@ -629,7 +718,7 @@
                                                     <li class="feature-text">Sweet Lake <span>2.86km</span></li>
                                                 </ul>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -773,13 +862,19 @@
                                             </div>
                                         </div>
                                         <div class="feature-list-area">
-                                            <ul
-                                                class="feature-list-items icon-feature-list">
-                                                <li>Due to the ongoing pandemic, we request you to refer and adhere to guidelines issued by the State and Union Government wherever applicable.</li>
-                                                <li>Your cooperation is important for hassle-free travel and safety of yourself, staff and co-travelers</li>
-                                                <li>Not following the guidelines, may result in denied check-in, cancellation of booking or denial of entry through the state borders</li>
-                                                <li>The primary guest must be at least 18 years of age to check into this hotel(s)</li>
-                                                <li>Extra bed can be accommodated with a folding cot or a mattress, subject to room size & availability.</li>
+                                            <ul class="feature-list-items icon-feature-list">
+                                                <li>Due to the ongoing pandemic, we request you to refer and adhere to
+                                                    guidelines issued by the State and Union Government wherever
+                                                    applicable.</li>
+                                                <li>Your cooperation is important for hassle-free travel and safety of
+                                                    yourself, staff and co-travelers</li>
+                                                <li>Not following the guidelines, may result in denied check-in,
+                                                    cancellation of booking or denial of entry through the state borders
+                                                </li>
+                                                <li>The primary guest must be at least 18 years of age to check into
+                                                    this hotel(s)</li>
+                                                <li>Extra bed can be accommodated with a folding cot or a mattress,
+                                                    subject to room size & availability.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -930,7 +1025,7 @@
                         <div class="single-widget">
                             <div class="about-widget">
                                 <a href="index.html" class="footer-logo"><img src="assets/images/touropa-white.png"
-                                    alt="touropa"></a>
+                                        alt="touropa"></a>
                                 <p>Lorem Ipsum passage, and going through the cites of the word in classical literature,
                                     discovered the undoubtable source.</p>
                             </div>
@@ -996,6 +1091,263 @@
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
     <script src="assets/js/gmaps.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownButton = document.getElementById("hotemdropdownButton");
+            const dropdownContent = document.getElementById("hoteldropdownContent");
+            const searchInput = document.getElementById("hotelsearchInput");
+            const dropdownList = document.getElementById("hoteldropdownList");
+            const dropdownValue = document.getElementById("hotemdropdownvalue"); // Typo fix
+
+            // Set a default value
+            dropdownValue.textContent = "Dublin Ireland";
+
+            // Function to toggle the dropdown
+            function toggleDropdown() {
+                dropdownContent.classList.toggle("show");
+            }
+
+            // Function to set the selected value and hide the dropdown
+            function setValueAndHideDropdown(value) {
+                dropdownValue.textContent = value;
+                toggleDropdown();
+            }
+
+            // Click event for the dropdown button
+            dropdownButton.addEventListener("click", toggleDropdown);
+
+            // Click event for the list items
+            dropdownList.addEventListener("click", function (e) {
+                if (e.target.tagName === "LI") {
+                    setValueAndHideDropdown(e.target.textContent);
+                }
+            });
+
+            // Click event for the search input
+            searchInput.addEventListener("input", function () {
+                const searchValue = searchInput.value.toLowerCase();
+                const items = dropdownList.querySelectorAll("li");
+
+                items.forEach((item) => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchValue)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+
+            // Click event to close the dropdown when clicking outside
+            window.addEventListener("click", function (e) {
+                if (!dropdownButton.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove("show");
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownButton = document.getElementById("PassengerCabinHotelbtn");
+            const dropdownContainerHotel = document.getElementById("dropdownContainerHotel");
+            const adultIncrementButtonHotel = document.getElementById("adultIncrementButtonHotel");
+            const adultDecrementButtonHotel = document.getElementById("adultDecrementButtonHotel");
+            const childrenIncrementButtonHotel = document.getElementById("childrenIncrementButtonHotel");
+            const childrenDecrementButtonHotel = document.getElementById("childrenDecrementButtonHotel");
+            const infantIncrementButtonHotel = document.getElementById("infantIncrementButtonHotel");
+            const infantDecrementButtonHotel = document.getElementById("infantDecrementButtonHotel");
+            const adultNumPersonsHotel = document.getElementById("adultNumPersonsHotel");
+            const childrenNumPersonsHotel = document.getElementById("childrenNumPersonsHotel");
+            const infantNumPersonsHotel = document.getElementById("infantNumPersonsHotel");
+            const totalPersonsHotelSpan = document.getElementById("totalPersonsHotel");
+            const selectedCabinClass = document.getElementById("selectedCabinClass");
+            const selectedNumPersons = document.getElementById("selectedNumPersons");
+
+            // rooms
+            const roomIncrementButton = document.getElementById("roomIncrementButton");
+            const roomDecrementButton = document.getElementById("roomDecrementButton");
+            const roomNumRooms = document.getElementById("roomNumRooms");
+            const selectedNumRooms = document.getElementById("selectedNumRooms");
+
+            const okButtonHotel = document.getElementById("okButtonHotel");
+
+            dropdownButton.addEventListener("click", () => {
+                if (dropdownContainerHotel.style.display === "none" || dropdownContainerHotel.style.display === "") {
+                    dropdownContainerHotel.style.display = "block";
+                } else {
+                    dropdownContainerHotel.style.display = "none";
+                }
+            });
+
+            document.addEventListener("click", (event) => {
+                const targetElement = event.target;
+                if (!dropdownContainerHotel.contains(targetElement) && !dropdownButton.contains(targetElement)) {
+                    dropdownContainerHotel.style.display = "none";
+                }
+            });
+
+            let adultCount = 1;
+            let childrenCount = 0;
+            let infantCount = 0;
+            let roomCount = 1;
+
+            function updateTotalPersonsHotel() {
+                const total = adultCount + childrenCount + infantCount;
+                totalPersonsHotelSpan.textContent = total;
+            }
+
+            adultIncrementButtonHotel.addEventListener("click", () => {
+                adultNumPersonsHotel.value = parseInt(adultNumPersonsHotel.value) + 1;
+                adultCount++;
+                updateTotalPersonsHotel();
+            });
+
+            adultDecrementButtonHotel.addEventListener("click", () => {
+                if (adultCount > 1) {
+                    adultNumPersonsHotel.value = parseInt(adultNumPersonsHotel.value) - 1;
+                    adultCount--;
+                    updateTotalPersonsHotel();
+                }
+            });
+
+            childrenIncrementButtonHotel.addEventListener("click", () => {
+                childrenNumPersonsHotel.value = parseInt(childrenNumPersonsHotel.value) + 1;
+                childrenCount++;
+                updateTotalPersonsHotel();
+            });
+
+            childrenDecrementButtonHotel.addEventListener("click", () => {
+                if (childrenCount > 0) {
+                    childrenNumPersonsHotel.value = parseInt(childrenNumPersonsHotel.value) - 1;
+                    childrenCount--;
+                    updateTotalPersonsHotel();
+                }
+            });
+
+            infantIncrementButtonHotel.addEventListener("click", () => {
+                infantCount++;
+                infantNumPersonsHotel.value = parseInt(infantNumPersonsHotel.value) + 1;
+                updateTotalPersonsHotel();
+            });
+
+            infantDecrementButtonHotel.addEventListener("click", () => {
+                if (infantCount > 0) {
+                    infantNumPersonsHotel.value = parseInt(infantNumPersonsHotel.value) - 1;
+                    infantCount--;
+                    updateTotalPersonsHotel();
+                }
+            });
+
+            updateTotalPersonsHotel();
+
+            // for rooms
+            function updateTotalRooms() {
+                selectedNumRooms.textContent = roomCount;
+            }
+
+            // Event listeners for room increment and decrement
+            roomIncrementButton.addEventListener("click", () => {
+                roomNumRooms.value = parseInt(roomNumRooms.value) + 1;
+                roomCount++;
+                updateTotalRooms();
+            });
+
+            roomDecrementButton.addEventListener("click", () => {
+                if (roomCount > 1) {
+                    roomNumRooms.value = parseInt(roomNumRooms.value) - 1;
+                    roomCount--;
+                    updateTotalRooms();
+                }
+            });
+
+            // Call the updateTotalRooms function to initialize the display
+            updateTotalRooms();
+
+            // Get all checkboxes with name "hotelstare"
+            const checkboxes = document.querySelectorAll('input[name="hotelstare"]');
+
+            // Add a change event listener to each checkbox
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener("change", () => {
+                    // Create an array to store the checked values
+                    const selectedValuesHotel = [];
+
+                    // Iterate through checkboxes and check if they are checked
+                    checkboxes.forEach((checkbox) => {
+                        if (checkbox.checked) {
+                            selectedValuesHotel.push(checkbox.value);
+                        }
+                    });
+
+                    // Display the selected values
+                    document.getElementById("selectedValuesHotel").textContent = `${selectedValuesHotel.join(", ")}`;
+                });
+            });
+
+            okButtonHotel.addEventListener("click", () => {
+                dropdownContainerHotel.style.display = "none";
+            });
+
+            document.addEventListener("click", (event) => {
+                const targetElement = event.target;
+                if (!dropdownContainerHotel.contains(targetElement) && !dropdownButton.contains(targetElement)) {
+                    dropdownContainerHotel.style.display = "none";
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            // show hide div
+            // DDate
+            $('#openDCalendarhotel').click(function () {
+                $('#selectedDDatehotel').datepicker('show');
+            });
+            $('#openRCalendar').click(function () {
+                $('#selectedRDate').datepicker('show');
+            });
+
+            var today = new Date();
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var dayName = dayNames[today.getDay()];
+            var monthNames = [
+                "Jan", "Feb", "Mar", "Apr",
+                "May", "Jun", "Jul", "Aug",
+                "Sep", "Oct", "Nov", "Dec"
+            ];
+            var monthIndex = today.getMonth();
+            var formattedMonth = monthNames[monthIndex];
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+
+            var defaultDateString = yyyy + '-' + mm + '-' + dd + '-' + dayName;
+            var defaultDate = new Date(defaultDateString);
+
+            // DDate function
+            $(function () {
+                $('#selectedDDatehotel').datepicker({
+                    dateFormat: 'dd M yy',
+                    defaultDate: defaultDate,
+                    onSelect: function (dateText, inst) {
+                        var selectedDate = new Date(dateText);
+                        var dayNumber = selectedDate.getDate();
+                        var dayName = $.datepicker.formatDate('DD', selectedDate);
+                        var selectedMonth = $.datepicker.formatDate('M', selectedDate);
+                        var selectedYear = selectedDate.getFullYear();
+                        $('#displayDDayNumberhoel').text(dayNumber);
+                        $('#displayDMonthhotel').text(selectedMonth);
+                        $('#displayDYearhotel').text(selectedYear);
+                        $('#displayRDayhotel').text(dayName);
+                    }
+                });
+                $('#displayDDayNumberhoel').text(dd);
+                $('#displayDMonthhotel').text(formattedMonth);
+                $('#displayDYearhotel').text(yyyy);
+                $('#displayRDayhotel').text(dayName);
+            });
+        });
+
+    </script>
 </body>
 
 </html>
