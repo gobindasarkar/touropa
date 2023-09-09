@@ -238,22 +238,51 @@
                 <div class="col-lg-12 mb-5">
                     <div class="package-details-area">
                         <div class="package-details-left">
-                            <div class="single-details">
-                                <h4>start from</h4>
-                                <h3>Bangladesh</h3>
+                            <div class="dropdown single-search-item" id="Formdropdown">
+                                <button id="hotemdropdownButton" type="button" class="search-dropdoen-btn">
+                                    <div class="top-text">
+                                        city <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div id="hotemdropdownvalue" class="form-to-value">select form</div>
+                                </button>
+                                <div id="hoteldropdownContent" class="dropdown-content dropdown-menu">
+                                    <input type="text" id="hotelsearchInput" class="search-dropdown-input"
+                                        placeholder="Search...">
+                                    <ul id="hoteldropdownList" class="dropdown-items">
+                                        <li>Dublin Ireland</li>
+                                        <li>Madrid Spain</li>
+                                        <li>Bengaluru</li>
+                                        <li>Kolkata</li>
+                                        <li>Hyderabad</li>
+                                        <li>Goa</li>
+                                        <li>Chennai</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="single-details">
-                                <h4>Price category</h4>
-                                <h3>Makkah</h3>
+
+                            <div class="d-date single-search-item">
+                                <input type="text" id="selectedDDatehotel" readonly hidden>
+                                <button id="openDCalendarhotel" class="search-dropdoen-btn" type="button">
+                                    <div class="top-text">
+                                        DEPARTURE <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div class="date"><span id="displayDDayNumberhoel" class="day-number"></span><span
+                                            id="displayDMonthhotel"></span><span id="displayDYearhotel"></span></div>
+                                    <div class="day"><span id="displayRDayhotel"></span></div>
+                                </button>
                             </div>
-                            <div class="single-details">
-                                <h4>departs on</h4>
-                                <h3>12 <small>Apr' 23 Wednesday</small></h3>
+                            <div class="r-date single-search-item">
+                                <input type="text" id="selectedRDate" readonly hidden>
+                                <button id="openRCalendar" class="search-dropdoen-btn" type="button">
+                                    <div class="top-text">
+                                        RETURN <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                    <div class="date"><span id="displayRDayNumber" class="day-number"></span><span
+                                            id="displayRMonth"></span><span id="displayRYear"></span></div>
+                                    <div class="day"><span id="displayRDay"></span></div>
+                                </button>
                             </div>
-                            <div class="single-details">
-                                <h4>return</h4>
-                                <h3>22 <small>Apr’23 Wednesday</small></h3>
-                            </div>
+
                         </div>
                         <div class="package-details-right">
                             <button class="primary-btn-outline">DOWNLOAD PACKAGE</button>
@@ -422,7 +451,8 @@
                                                 </a>
                                             </div>
                                             <div class="itinerary-info">
-                                                <h4><a href="#">Day 01: (23 MAR): Dhaka – Jeddah - Makkah (Perform Umrah)</a></h4>
+                                                <h4><a href="#">Day 01: (23 MAR): Dhaka – Jeddah - Makkah (Perform
+                                                        Umrah)</a></h4>
                                                 <p>Lorem ipsum dolor sit amet consectetur. Nullam lobortis cursus
                                                     adipiscing fringilla adipiscing dui. Fringilla ultrices nisi sapien
                                                     donec varius quam. Turpis quis eleifend massa sollicitudin placerat
@@ -961,7 +991,7 @@
                         <div class="single-widget">
                             <div class="about-widget">
                                 <a href="index.html" class="footer-logo"><img src="assets/images/touropa-white.png"
-                                    alt="touropa"></a>
+                                        alt="touropa"></a>
                                 <p>Lorem Ipsum passage, and going through the cites of the word in classical literature,
                                     discovered the undoubtable source.</p>
                             </div>
@@ -1027,6 +1057,136 @@
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM"></script>
     <script src="assets/js/gmaps.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownButton = document.getElementById("hotemdropdownButton");
+            const dropdownContent = document.getElementById("hoteldropdownContent");
+            const searchInput = document.getElementById("hotelsearchInput");
+            const dropdownList = document.getElementById("hoteldropdownList");
+            const dropdownValue = document.getElementById("hotemdropdownvalue"); // Typo fix
+
+            // Set a default value
+            dropdownValue.textContent = "Dublin Ireland";
+
+            // Function to toggle the dropdown
+            function toggleDropdown() {
+                dropdownContent.classList.toggle("show");
+            }
+
+            // Function to set the selected value and hide the dropdown
+            function setValueAndHideDropdown(value) {
+                dropdownValue.textContent = value;
+                toggleDropdown();
+            }
+
+            // Click event for the dropdown button
+            dropdownButton.addEventListener("click", toggleDropdown);
+
+            // Click event for the list items
+            dropdownList.addEventListener("click", function (e) {
+                if (e.target.tagName === "LI") {
+                    setValueAndHideDropdown(e.target.textContent);
+                }
+            });
+
+            // Click event for the search input
+            searchInput.addEventListener("input", function () {
+                const searchValue = searchInput.value.toLowerCase();
+                const items = dropdownList.querySelectorAll("li");
+
+                items.forEach((item) => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchValue)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+
+            // Click event to close the dropdown when clicking outside
+            window.addEventListener("click", function (e) {
+                if (!dropdownButton.contains(e.target) && !dropdownContent.contains(e.target)) {
+                    dropdownContent.classList.remove("show");
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            // show hide div
+            // DDate
+            $('#openDCalendarhotel').click(function () {
+                $('#selectedDDatehotel').datepicker('show');
+            });
+            $('#openRCalendar').click(function () {
+                $('#selectedRDate').datepicker('show');
+            });
+
+            var today = new Date();
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var dayName = dayNames[today.getDay()];
+            var monthNames = [
+                "Jan", "Feb", "Mar", "Apr",
+                "May", "Jun", "Jul", "Aug",
+                "Sep", "Oct", "Nov", "Dec"
+            ];
+            var monthIndex = today.getMonth();
+            var formattedMonth = monthNames[monthIndex];
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+
+            var defaultDateString = yyyy + '-' + mm + '-' + dd + '-' + dayName;
+            var defaultDate = new Date(defaultDateString);
+
+            // DDate function
+            $(function () {
+                $('#selectedDDatehotel').datepicker({
+                    dateFormat: 'dd M yy',
+                    defaultDate: defaultDate,
+                    onSelect: function (dateText, inst) {
+                        var selectedDate = new Date(dateText);
+                        var dayNumber = selectedDate.getDate();
+                        var dayName = $.datepicker.formatDate('DD', selectedDate);
+                        var selectedMonth = $.datepicker.formatDate('M', selectedDate);
+                        var selectedYear = selectedDate.getFullYear();
+                        $('#displayDDayNumberhoel').text(dayNumber);
+                        $('#displayDMonthhotel').text(selectedMonth);
+                        $('#displayDYearhotel').text(selectedYear);
+                        $('#displayRDayhotel').text(dayName);
+                    }
+                });
+                $('#displayDDayNumberhoel').text(dd);
+                $('#displayDMonthhotel').text(formattedMonth);
+                $('#displayDYearhotel').text(yyyy);
+                $('#displayRDayhotel').text(dayName);
+            });
+            // selectedRDate function 
+            $(function () {
+                $('#selectedRDate').datepicker({
+                    dateFormat: 'dd M yy',
+                    defaultDate: defaultDate,
+                    onSelect: function (dateText, inst) {
+                        var selectedDate = new Date(dateText);
+                        var dayNumber = selectedDate.getDate();
+                        var dayName = $.datepicker.formatDate('DD', selectedDate);
+                        var selectedMonth = $.datepicker.formatDate('M', selectedDate);
+                        var selectedYear = selectedDate.getFullYear();
+                        $('#displayRDayNumber').text(dayNumber);
+                        $('#displayRMonth').text(selectedMonth);
+                        $('#displayRYear').text(selectedYear);
+                        $('#displayRDay').text(dayName);
+                    }
+                });
+                $('#displayRDayNumber').text(dd);
+                $('#displayRMonth').text(formattedMonth);
+                $('#displayRYear').text(yyyy);
+                $('#displayRDay').text(dayName);
+            });
+        });
+
+    </script>
 </body>
 
 </html>
